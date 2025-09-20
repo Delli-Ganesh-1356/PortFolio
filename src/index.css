@@ -160,3 +160,20 @@
   padding: 0;
   text-align: center;
 }
+
+@keyframes pulse-subtle {
+  0%,100% {opacity:0.5;}
+  50% {opacity:1;}
+}
+.star.animate-pulse-subtle {
+  animation: pulse-subtle infinite ease-in-out;
+}
+
+/* Use CSS variables for dynamic meteor movement */
+@keyframes meteor {
+  0% { transform: translate(0,0) rotate(45deg); opacity:1; }
+  100% { transform: translate(var(--dx), var(--dy)) rotate(45deg); opacity:0; }
+}
+.meteor {
+  animation-fill-mode: forwards;
+}
