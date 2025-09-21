@@ -1,32 +1,40 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
 
+// ✅ Import images (rename your files in src/assets to match these)
+import notesAppImg from "../assets/notesAppImg.png";
+import foodDeliveryImg from "../assets/foodDeliveryImg.png";
+import ecommerceImg from "../assets/ecommerceImg.png";
+
 const projects = [
   {
     id: 1,
     title: "Notes App",
-    description: "A full-stack note-taking web application using Java Spring Boot for backend and React for frontend.",
-    image: "/projects/notes-app.png", // replace with actual screenshot
+    description:
+      "A full-stack note-taking web application with authentication, CRUD operations, and a clean UI.",
+    image: notesAppImg,
     tags: ["Java", "Spring Boot", "React", "Tailwind CSS"],
-    demoUrl: "#", // replace with live demo if available
+    demoUrl: "#", // replace with live demo link if deployed
     githubUrl: "https://github.com/Delli-Ganesh-1356/Notes-app",
   },
   {
     id: 2,
-    title: "Expense Tracker",
-    description: "An expense tracking web app to manage personal finances with charts and reporting features.",
-    image: "/projects/expense-tracker.png", // replace with actual screenshot
-    tags: ["Java", "Spring Boot", "React", "Tailwind CSS"],
-    demoUrl: "#", // replace with live demo if available
-    githubUrl: "https://github.com/Delli-Ganesh-1356/Expense-Tracker",
+    title: "Food Delivery App",
+    description:
+      "A food ordering app with cart management, real-time order tracking, and secure payments.",
+    image: foodDeliveryImg,
+    tags: ["React", "Java", "Spring Boot", "Express", "MongoDB", "Tailwind CSS"],
+    demoUrl: "#", // replace with live demo link if deployed
+    githubUrl: "https://github.com/Delli-Ganesh-1356/Food-Delivery-App",
   },
   {
     id: 3,
-    title: "Portfolio Website",
-    description: "My personal portfolio website showcasing my skills, projects, and contact info.",
-    image: "/projects/portfolio.png", // replace with screenshot
-    tags: ["React", "Tailwind CSS"],
-    demoUrl: "#", // replace with live link if deployed
-    githubUrl: "https://github.com/machadop1407/beautiful-react-tailwind-portfolio",
+    title: "E-Commerce App",
+    description:
+      "An e-commerce platform with product listings, cart, checkout, and order history features.",
+    image: ecommerceImg,
+    tags: ["Java", "Spring Boot", "React", "Tailwind CSS", "MySQL"],
+    demoUrl: "#", // replace with live demo link if deployed
+    githubUrl: "https://github.com/Delli-Ganesh-1356/E-Commerce-App",
   },
 ];
 
@@ -39,15 +47,18 @@ export const ProjectsSection = () => {
         </h2>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Here are some of my recent projects. Each project was carefully crafted with attention to detail, performance, and user experience.
+          Here are some of my recent projects. Each project was carefully crafted with
+          attention to detail, performance, and user experience.
         </p>
 
+        {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <div
               key={project.id}
-              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
+              className="group bg-card rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
             >
+              {/* Project Image */}
               <div className="h-48 overflow-hidden">
                 <img
                   src={project.image}
@@ -56,7 +67,9 @@ export const ProjectsSection = () => {
                 />
               </div>
 
+              {/* Project Content */}
               <div className="p-6">
+                {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag, index) => (
                     <span
@@ -68,21 +81,29 @@ export const ProjectsSection = () => {
                   ))}
                 </div>
 
+                {/* Title + Description */}
                 <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
-                <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
+                <p className="text-muted-foreground text-sm mb-4">
+                  {project.description}
+                </p>
 
+                {/* Links */}
                 <div className="flex justify-between items-center">
                   <div className="flex space-x-3">
-                    <a
-                      href={project.demoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <ExternalLink size={20} />
-                    </a>
+                    {project.demoUrl && project.demoUrl !== "#" && (
+                      <a
+                        href={project.demoUrl}
+                        aria-label={`Live demo of ${project.title}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                      >
+                        <ExternalLink size={20} />
+                      </a>
+                    )}
                     <a
                       href={project.githubUrl}
+                      aria-label={`View ${project.title} on GitHub`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-foreground/80 hover:text-primary transition-colors duration-300"
@@ -96,6 +117,7 @@ export const ProjectsSection = () => {
           ))}
         </div>
 
+        {/* GitHub Button */}
         <div className="text-center mt-12">
           <a
             className="cosmic-button w-fit flex items-center mx-auto gap-2"
