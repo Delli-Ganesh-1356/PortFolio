@@ -1,10 +1,9 @@
-import { ArrowRight, ExternalLink, Github } from "lucide-react";
-import { Link } from "react-router-dom";
+import { ExternalLink, Github } from "lucide-react";
 import notesAppImg from "../assets/notesAppImg.png";
 import foodDeliveryImg from "../assets/foodDeliveryImg.png";
 import ecommerceImg from "../assets/ecommerceImg.png";
 
-const projects = [
+const allProjects = [
   {
     id: 1,
     title: "Notes App",
@@ -35,23 +34,33 @@ const projects = [
     demoUrl: "#",
     githubUrl: "https://github.com/Delli-Ganesh-1356/E-Commerce-App",
   },
+  {
+    id: 4,
+    title: "Portfolio Website",
+    description:
+      "A modern personal portfolio built with React and Tailwind showcasing skills, projects, and resume.",
+    image: "https://via.placeholder.com/400x250",
+    tags: ["React", "Tailwind CSS", "Framer Motion"],
+    demoUrl: "#",
+    githubUrl: "https://github.com/Delli-Ganesh-1356/portfolio",
+  },
 ];
 
-export const ProjectsSection = () => {
+export const AllProjects = () => {
   return (
-    <section id="projects" className="py-24 px-4 relative">
-      <div className="container mx-auto max-w-5xl">
+    <section id="all-projects" className="py-24 px-4 relative">
+      <div className="container mx-auto max-w-6xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          Featured <span className="text-primary"> Projects </span>
+          All <span className="text-primary"> Projects </span>
         </h2>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Here are some of my recent projects. Each project was carefully crafted with
-          attention to detail, performance, and user experience.
+          Here you can explore all the projects I have worked on, ranging from
+          web apps to personal experiments.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
+          {allProjects.map((project) => (
             <div
               key={project.id}
               className="group bg-card rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
@@ -109,23 +118,6 @@ export const ProjectsSection = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="flex flex-col sm:flex-row justify-center gap-4 mt-12">
-          <Link
-            to="/all-projects"
-            className="cosmic-button w-fit flex items-center gap-2"
-          >
-            See All Projects <ArrowRight size={16} />
-          </Link>
-          <a
-            className="cosmic-button w-fit flex items-center gap-2"
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://github.com/Delli-Ganesh-1356"
-          >
-            Check My Github <ArrowRight size={16} />
-          </a>
         </div>
       </div>
     </section>
