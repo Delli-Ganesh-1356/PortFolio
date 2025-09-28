@@ -7,7 +7,7 @@ export const Certifications = () => {
       issuer: "Greens Technologies",
       date: "April 2025",
       link: "https://pdflink.to/delli-ganesh-java-full-stack/",
-      image: "../../public/Java_Full_Stack.png",
+      image: "../Java_Full_Stack.png",
     },
     {
       title: "SQL Basic",
