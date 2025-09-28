@@ -5,11 +5,13 @@ import { cn } from "@/lib/utils";
 
 const navItems = [
   { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Skills", href: "/skills" },
   { name: "Projects", href: "/all-projects" },
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Contact", href: "#contact" },
+  { name: "Certifications", href: "/certifications" },
+  { name: "Contact", href: "/contact" },
 ];
+
 
 export const Navbar = ({ darkMode, setDarkMode }) => {
   const [isScrolled, setIsScrolled] = useState(false);
