@@ -4,6 +4,12 @@ import { Github, ExternalLink, ArrowLeft } from "lucide-react";
 import notesAppImg from "../assets/notesAppImg.png";
 import foodDeliveryImg from "../assets/foodDeliveryImg.png";
 import ecommerceImg from "../assets/ecommerceImg.png";
+import farmyImg from "../assets/farmyImg.png";
+import coffeeImg from "../assets/coffeImg.png";
+import flowers from "../assets/flowers.png";
+import furniture from "../assets/furniture.png";
+import soccer from "../assets/soccer.png";
+import rentx from "../assets/rentx.png";
 
 const allProjects = [
   {
@@ -32,6 +38,66 @@ const allProjects = [
     tags: ["Java", "Spring Boot", "React", "Tailwind CSS", "MySQL"],
     demoUrl: "#",
     githubUrl: "https://github.com/Delli-Ganesh-1356/E-Commerce-App",
+  },
+   {
+    id: 4,
+    title: "Farmy - Fruits & Vegetables",
+    description:
+      "A responsive e-commerce website for fruits and vegetables with product showcase, categories, and customer reviews.",
+    image: farmyImg,
+    tags: ["HTML", "CSS", "JavaScript", "Swiper.js", "Boxicons"],
+    demoUrl: "#", // Add demo URL if available
+    githubUrl: "#", // Add GitHub repo URL if available
+  },
+  {
+    id: 5,
+    title: "Coffee Shop",
+    description:
+      "A responsive Coffee Shop landing page with product showcase, customer reviews, and contact information.",
+    image: coffeeImg,
+    tags: ["HTML", "CSS", "JavaScript", "Boxicons"],
+    demoUrl: "#", // add demo link if available
+    githubUrl: "#", // add GitHub repo if available
+  },
+  {
+    id: 6,
+    title: "Flower Shop",
+    description:
+      "A fully responsive Flower Shop landing page with featured products, services, offers, and contact section.",
+    image: flowers,
+    tags: ["HTML", "CSS", "JavaScript", "Bootstrap", "Boxicons"],
+    demoUrl: "#", // Add live demo link if available
+    githubUrl: "#", // Add GitHub link if available
+  },
+  {
+    id: 7,
+    title: "Rent X ",
+    description:
+      "A fully responsive House Rental landing page with featured products, services, offers, and contact section.",
+    image: rentx,
+    tags: ["HTML", "CSS", "JavaScript", "Bootstrap", "Boxicons"],
+    demoUrl: "#", // Add live demo link if available
+    githubUrl: "#", // Add GitHub link if available
+  },
+  {
+    id: 8,
+    title: "Furniture Space ",
+    description:
+      "A fully responsive Furniture Shop landing page with featured products, services, offers, and contact section.",
+    image: furniture,
+    tags: ["HTML", "CSS", "JavaScript", "Bootstrap", "Boxicons"],
+    demoUrl: "#", // Add live demo link if available
+    githubUrl: "#", // Add GitHub link if available
+  },
+  {
+    id: 9,
+    title: "Soccer Space ",
+    description:
+      "A fully responsive Soccer academy landing page with featured products, services, offers, and contact section.",
+    image: soccer,
+    tags: ["HTML", "CSS", "JavaScript", "Bootstrap", "Boxicons"],
+    demoUrl: "#", // Add live demo link if available
+    githubUrl: "#", // Add GitHub link if available
   },
 ];
 

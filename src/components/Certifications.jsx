@@ -4,24 +4,17 @@ export const Certifications = () => {
   const certs = [
     {
       title: "Full Stack Java Developer",
-      issuer: "Great Learning",
-      date: "Aug 2025",
-      link: "https://example.com/certificate1",
-      image: "https://via.placeholder.com/400x250?text=Certificate+1",
+      issuer: "Greens Technologies",
+      date: "April 2025",
+      link: "https://pdflink.to/delli-ganesh-java-full-stack/",
+      image: "../../public/Java_Full_Stack.png",
     },
     {
-      title: "Frontend Development",
-      issuer: "Udemy",
-      date: "Jun 2025",
-      link: "https://example.com/certificate2",
-      image: "https://via.placeholder.com/400x250?text=Certificate+2",
-    },
-    {
-      title: "React & Tailwind Mastery",
-      issuer: "Coursera",
-      date: "May 2025",
-      link: "https://example.com/certificate3",
-      image: "https://via.placeholder.com/400x250?text=Certificate+3",
+      title: "SQL Basic",
+      issuer: "Hacker Rank",
+      date: "Sep 2025",
+      link: "https://pdflink.to/delli-ganesh-sql-basic/",
+      image: "../SQL_Basic.png",
     },
   ];
 

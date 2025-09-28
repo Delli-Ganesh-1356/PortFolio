@@ -4,6 +4,7 @@ import notesAppImg from "../assets/notesAppImg.png";
 import foodDeliveryImg from "../assets/foodDeliveryImg.png";
 import ecommerceImg from "../assets/ecommerceImg.png";
 
+
 const projects = [
   {
     id: 1,
